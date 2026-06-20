@@ -25,7 +25,6 @@ function Go; function Disp; function Pick; function Restrict;
 
 	mes "[Warper]";
 	mes "Use ^0000FF@load^000000 or ^0000FF@return^000000 to get back here.";
-	next;
 
 menu	"Last Warp ^777777["+lastwarp$+"]^000000",-,
     	" ~ Towns",Towns,
