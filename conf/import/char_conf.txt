@@ -1,5 +1,3 @@
-// Tell the char server how to reach the login container
 login_ip: login
-
-// IMPORTANT: Bind to all interfaces so other containers can reach it
 char_ip: 0.0.0.0
+pincode_enabled: no
