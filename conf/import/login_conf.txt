@@ -1,1 +1,2 @@
 bind_ip: 0.0.0.0
+login_port: 6900
