@@ -38,6 +38,12 @@ item_rate_treasure: 1000
 // drops to near-100%; tames the effect of our boosted item_rate_* values.
 item_logarithmic_drops: yes
 
+// conf/battle/monster.conf
+// Show mob's level next to their name (1: HP, 2: HP%, 4: level)
+show_mob_info: 4
+// Monsters drop zeny based on their level
+zeny_from_mobs: yes
+
 // conf/battle/party.conf
 // Encourage partying: even-share bonus of 100% per extra member means the
 // party's total EXP scales to N*100%, so each member receives a full 100%.
