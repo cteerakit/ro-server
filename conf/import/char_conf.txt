@@ -8,3 +8,9 @@ bind_ip: 0.0.0.0
 start_point: payo2,90,119
 start_point_pre: payo2,90,119
 start_point_doram: payo2,90,119
+
+// conf/char_athena.conf - minimum character name length
+char_name_min_length: 3
+
+// conf/char_athena.conf - name character restriction (0: no restriction)
+char_name_option: 0
