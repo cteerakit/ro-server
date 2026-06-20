@@ -1,3 +1,4 @@
 login_ip: login
 char_ip: 0.0.0.0
 pincode_enabled: no
+char_del_delay: 0
