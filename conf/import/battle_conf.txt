@@ -34,6 +34,11 @@ item_rate_mvp: 150
 // Treasure boxes
 item_rate_treasure: 150
 
+// conf/battle/party.conf
+// Encourage partying: even-share bonus of 100% per extra member means the
+// party's total EXP scales to N*100%, so each member receives a full 100%.
+party_even_share_bonus: 100
+
 // conf/battle/exp.conf
 // Mid-rate multiplier (1500 = 15x). Stacks with the flattened curve in
 // db/re/job_exp.yml (see tools/exp_curve.py).
