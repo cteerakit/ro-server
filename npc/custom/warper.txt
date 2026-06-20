@@ -1364,6 +1364,7 @@ nameless_n,259,213,4	duplicate(Warper)	Warper#nam	811
 niflheim,205,179,4	duplicate(Warper)	Warper#nif	811
 pay_arche,42,134,4	duplicate(Warper)	Warper#arc	811
 payon,182,108,4	duplicate(Warper)	Warper#pay	811
+payo2,81,128,4	duplicate(Warper)	Warper#payo2	811
 prontera,159,192,4	duplicate(Warper)	Warper#prt	811
 prt_fild05,279,223,6	duplicate(Warper)	Warper#cul	811
 rachel,135,116,4	duplicate(Warper)	Warper#rac	811

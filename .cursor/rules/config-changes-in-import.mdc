@@ -1,0 +1,34 @@
+---
+description: Always make server config changes in conf/import/ instead of base config files
+alwaysApply: true
+---
+
+# Config Changes Go in conf/import/
+
+When changing any server configuration (battle, map, char, login, inter, web, client, etc.), put the override in the matching file under `conf/import/` instead of editing the base config files under `conf/`.
+
+This keeps customizations separate from upstream defaults so they survive updates.
+
+## Mapping
+
+- `conf/battle/*.conf` overrides → `conf/import/battle_conf.txt`
+- `conf/map_athena.conf` overrides → `conf/import/map_conf.txt`
+- `conf/char_athena.conf` overrides → `conf/import/char_conf.txt`
+- `conf/login_athena.conf` overrides → `conf/import/login_conf.txt`
+- `conf/inter_athena.conf` overrides → `conf/import/inter_conf.txt`
+- `conf/web_athena.conf` overrides → `conf/import/web_conf.txt`
+
+## Rules
+
+- Never edit base config files directly to change a value; add/override the key in the import file.
+- Add a brief comment noting which base file the setting comes from.
+
+## Example
+
+To make players respawn with full HP/SP, add to `conf/import/battle_conf.txt`:
+
+```
+// conf/battle/player.conf
+restart_hp_rate: 100
+restart_sp_rate: 100
+```

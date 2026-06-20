@@ -4,3 +4,8 @@ max_walk_path: 25
 // conf/battle/client.conf
 // Don't show rAthena version/Git Hash to players on login
 display_version: no
+
+// conf/battle/player.conf
+// Players respawn with full HP/SP (percentage of max)
+restart_hp_rate: 100
+restart_sp_rate: 100
