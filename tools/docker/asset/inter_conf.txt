@@ -1,5 +1,35 @@
+// MySQL Login server
 login_server_ip: db
+login_server_id: ragnarok
+login_server_pw: ragnarok_password
+login_server_db: ragnarok
+
+// MySQL IpBan server
 ipban_db_ip: db
+ipban_db_id: ragnarok
+ipban_db_pw: ragnarok_password
+ipban_db_db: ragnarok
+
+// MySQL Character server
 char_server_ip: db
+char_server_id: ragnarok
+char_server_pw: ragnarok_password
+char_server_db: ragnarok
+
+// MySQL Map server
 map_server_ip: db
+map_server_id: ragnarok
+map_server_pw: ragnarok_password
+map_server_db: ragnarok
+
+// MySQL Web server
+web_server_ip: db
+web_server_id: ragnarok
+web_server_pw: ragnarok_password
+web_server_db: ragnarok
+
+// MySQL Log Database
 log_db_ip: db
+log_db_id: ragnarok
+log_db_pw: ragnarok_password
+log_db_db: ragnarok
