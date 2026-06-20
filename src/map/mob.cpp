@@ -2498,7 +2498,7 @@ static std::shared_ptr<s_item_drop> mob_setdropitem( const std::shared_ptr<s_mob
 	drop->item_data = { 0 };
 	drop->item_data.nameid = mobdrop->nameid;
 	drop->item_data.amount = qty;
-	drop->item_data.identify = itemdb_isidentified( mobdrop->nameid );
+	drop->item_data.identify = 1; // Always drop items identified
 	mob_setdropitem_option( drop->item_data, mobdrop );
 	drop->mob_id = mob_id;
 
@@ -3503,7 +3503,7 @@ int32 mob_dead(mob_data *md, block_list *src, int32 type)
 
 				struct item item = {};
 				item.nameid=entry->nameid;
-				item.identify= itemdb_isidentified(item.nameid);
+				item.identify= 1; // Always give MVP items identified
 				clif_mvp_item(mvp_sd,item.nameid);
 				log_mvp_nameid = item.nameid;
 

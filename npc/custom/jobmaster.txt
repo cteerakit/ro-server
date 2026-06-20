@@ -541,3 +541,6 @@ OnInit:
 	end;
 }
 
+// Duplicates
+//============================================================
+payo2,97,131,4	duplicate(Job Master)	Job Master#payo2	123
