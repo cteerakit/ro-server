@@ -214,51 +214,7 @@ function	script	F_KafStor	{
 		cutin "", 255;
 		close;
 	}
-	// Unable to access Normal Storage (Insufficient Basic Skills)
-	if (!callfunc("F_CanOpenStorage")) {
-		mes "[Kafra Employee]";
-		// Niflheim Specific Message
-		if (getarg(2) == 1) {
-			mes "^666666S-s-ssoooorry,";
-			mes "y-you're a-a-aaaa";
-			mes "Nooviiice... N-neeeds";
-			mes "B-basic sssskill l-level 6...^000000";
-			return;
-		}
-		mes "I'm sorry, but you";
-		mes "need the Novice's";
-		mes "Basic Skill Level 6 to";
-		mes "use the Storage Service.";
-		return;
-	}
-	// Accessing Normal Storage (Skipped if accessing Storage from Guild castle)
-	if (.@type != 2) {
-		// Consume "Free Ticket for Kafra Storage" if available.
-		if (countitem(7059))
-			delitem 7059,1;
-		else {
-			if (Zeny < .@fee) {
-				mes "[Kafra Employee]";
-				// Niflheim Specific Message
-				if (getarg(2) == 1) {
-					percentheal -50,-50;
-					mes "^666666Zeeeeeny...";
-					mes "M-more z-zeny...!";
-					mes "N-neeed 150... zeny...";
-					mes "Ergh! T-taking bl-blood~!^000000";
-					return;
-				}
-				// Standard Message
-				mes "I'm sorry, but you don't";
-				mes "have enough zeny to use";
-				mes "the Storage Service. Our";
-				mes "Storage access fee is " + .@fee + " zeny.";
-				return;
-			}
-			Zeny -= .@fee;
-			RESRVPTS += (.@fee/5);
-		}
-	}
+	// Custom: Storage is free and requires no Basic Skill.
 
 	// Surpress the "End" message if in guild castle.
 	if (.@type != 2) {

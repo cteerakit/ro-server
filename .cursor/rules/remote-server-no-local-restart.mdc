@@ -1,0 +1,14 @@
+---
+description: Server runs remotely; never start or restart server processes locally
+alwaysApply: true
+---
+
+# Remote Server: No Local Restart
+
+The rAthena server (login/char/map/web) runs on a REMOTE host, not on this machine.
+
+- Do NOT start, stop, or restart any server process locally (no `runserver`, no launching `map-server`/`char-server`/`login-server`/`web-server`, no killing those processes).
+- Do NOT assume a local server reflects the live server state.
+- Config and DB edits here only take effect after the operator deploys/reloads them on the remote host. Make the file changes, then tell the user what needs to be reloaded/restarted remotely instead of doing it.
+
+When a task would normally end with "restart the map-server", stop at the edit and hand off the restart instruction to the user.
