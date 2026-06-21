@@ -55,11 +55,11 @@ party_even_share_bonus: 100
 feature.bgqueue: off
 
 // conf/battle/exp.conf
-// 50x EXP multiplier (5000 = 50x). Stacks with the flattened curve in
+// 100x EXP multiplier (10000 = 100x). Stacks with the flattened curve in
 // db/re/job_exp.yml (see tools/exp_curve.py).
-base_exp_rate: 5000
-job_exp_rate: 5000
-mvp_exp_rate: 5000
-quest_exp_rate: 5000
+base_exp_rate: 10000
+job_exp_rate: 10000
+mvp_exp_rate: 10000
+quest_exp_rate: 10000
 // Extra EXP per additional attacker on a monster (default 25).
 exp_bonus_attacker: 100
