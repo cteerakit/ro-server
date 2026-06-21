@@ -1,0 +1,18 @@
+//===== rAthena Script =======================================
+//= Old Payon (payo2) Custom Merchants
+//===== Description: =========================================
+//= Extra merchant NPCs for the Old Payon town map (payo2).
+//= Add new merchants for this map below.
+//============================================================
+
+// Ammo Merchant ----------------------------------------------
+// Sells every arrow and bullet type that standard NPC merchants
+// offer, at the same default buy prices (-1 = use item DB price):
+//   Arrows:
+//     1750 Arrow         1755 Arrow of Wind    1762 Rusty Arrow
+//     1751 Silver Arrow  1756 Stone Arrow      1767 Arrow of Shadow
+//     1752 Fire Arrow    1757 Immaterial Arrow 1770 Iron Arrow
+//     1754 Crystal Arrow
+//   Bullets:
+//     13200 Bullet   13201 Silver Bullet   13202 Bloody Shell
+payo2,75,125,4	shop	Ammo	88,1750:-1,1751:-1,1752:-1,1754:-1,1755:-1,1756:-1,1757:-1,1762:-1,1767:-1,1770:-1,13200:-1,13201:-1,13202:-1
