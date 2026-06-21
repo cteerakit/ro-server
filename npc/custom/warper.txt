@@ -23,8 +23,9 @@ function Go; function Disp; function Pick; function Restrict;
 //	Main Menu:
 // --------------------------------------------------
 
-	mes "[Warper]";
-	mes "Use ^0000FF@load^000000 or ^0000FF@return^000000 to get back here.";
+	mes "[ผู้นำทาง]";
+	mes "ใช้ ^0000FF@load^000000 หรือ ^0000FF@return^000000 เพื่อกลับมาที่นี่";
+	mes "ใช้ ^0000FF@jump^000000 เพื่อวาร์ปแบบสุ่มภายในแผนที่";
 
 menu	"Last Warp ^777777["+lastwarp$+"]^000000",-,
     	" ~ Towns",Towns,
