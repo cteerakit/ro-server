@@ -5,3 +5,7 @@ login_port: 6900
 // Allow creating accounts via the _M/_F username suffix at the login screen.
 // Requires client-side password encryption to be disabled.
 new_account: yes
+
+// conf/login_athena.conf
+// Disable the IP ban system entirely (no static ipbanlist enforcement, no password-failure auto-bans).
+ipban_enable: no
