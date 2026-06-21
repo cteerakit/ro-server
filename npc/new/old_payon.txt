@@ -243,8 +243,12 @@ OnRecvCastlePy05:
 // Kafra
 //############################################################################################################################################################
 
+// Custom Kafra: standard services plus a Peco Peco rental option.
+// Builds its own menu so the shared F_Kafra function is left untouched;
+// reuses the existing F_Kaf* helpers and the F_Breeder rental function.
 payo2,99,116,4	script	Kafra Employee::kaf_oldpayon	113,{
 	cutin "kafra_05",2;
+	callfunc "F_ClearGarbage"; // Clear outdated, unused variables
 	callfunc "F_KafSet";
 
 	mes "[Kafra Employee]";
@@ -252,12 +256,42 @@ payo2,99,116,4	script	Kafra Employee::kaf_oldpayon	113,{
 	mes "is always working to provide";
 	mes "you with convenient services.";
 	mes "How may I be of assistance?";
+	next;
 
-	callfunc "F_Kafra",5,0,1,60,930;
-
-	M_Save:
-		savepoint "payo2",69,100;
-		callfunc "F_KafEnd",0,1,"in the city of Payon";
+	setarray .@K_Menu$[0],"Save","Use Storage","Use Teleport Service","Rent a Pushcart","Rent a Peco Peco","Check Other Information","Cancel";
+	while (true) {
+		.@j = select(implode(.@K_Menu$,":")) - 1;
+		if (.@K_Menu$[.@j] == "Save") {
+			savepoint "payo2",90,119;
+			callfunc "F_KafEnd",5,1,"in Payon";
+			end;
+		}
+		else if (.@K_Menu$[.@j] == "Use Storage") {
+			callfunc "F_KafStor",0,60,5;
+			next;
+		}
+		else if (.@K_Menu$[.@j] == "Use Teleport Service") {
+			callfunc "F_KafTele",5;
+			next;
+		}
+		else if (.@K_Menu$[.@j] == "Rent a Pushcart") {
+			if (callfunc("F_KafCart",5,930) == 1)
+				next;
+		}
+		else if (.@K_Menu$[.@j] == "Rent a Peco Peco") {
+			callfunc "F_Breeder";
+			callfunc "F_KafEnd",5,0;
+			end;
+		}
+		else if (.@K_Menu$[.@j] == "Check Other Information") {
+			callfunc "F_KafInfo",1;
+			next;
+		}
+		else if (.@K_Menu$[.@j] == "Cancel") {
+			callfunc "F_KafEnd",5,0;
+			end;
+		}
+	}
 }
 
 //############################################################################################################################################################

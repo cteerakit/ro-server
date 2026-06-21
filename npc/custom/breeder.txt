@@ -11,9 +11,18 @@
 //============================================================
 
 prontera,124,201,1	script	Universal Rental NPC	726,{
+	callfunc "F_Breeder";
+	end;
+}
+
+// Universal mount/companion rental logic.
+// Rents the appropriate mount or companion based on the player's class
+// and learned skills. Returns to the caller when done.
+//============================================================
+function	script	F_Breeder	{
 	if (ismounting()) {
 		message strcharinfo(0),"You must first remove your mount.";
-		end;
+		return;
 	} else if (((eaclass()&EAJ_THIRDMASK)==EAJ_RANGER) && !countitem(6124)) {
 		if (!checkfalcon() && getskilllv("HT_FALCON") && !checkwug()) {
 			if(select(" ~ Falcon: ~ Warg")==1) setfalcon;
@@ -32,8 +41,8 @@ prontera,124,201,1	script	Universal Rental NPC	726,{
 	} else if (!checkmadogear() && getskilllv("NC_MADOLICENCE")) setmadogear;
 	else {
 		message strcharinfo(0),"You do not meet requirements to rent.";
-		end;
+		return;
 	}
 	specialeffect2 EF_TEIHIT3;
-	end;
+	return;
 }
