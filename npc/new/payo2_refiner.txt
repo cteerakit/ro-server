@@ -1,0 +1,21 @@
+//===== rAthena Script =======================================
+//= Old Payon (pa2_in01) Custom Refiner
+//===== Description: =========================================
+//= Standard weapon/armor equipment refiner.
+//= Uses the Refine UI when the feature is enabled, otherwise
+//= falls back to the classic refinemain dialog.
+//============================================================
+
+pa2_in01,81,32,4	script	Refiner#payo2	88,{
+	if (getbattleflag("feature.refineui")) {
+		mes "[Refiner]";
+		mes "I'm a blacksmith who can refine weapons and equipment.";
+		mes "Do you have anything that you'd like to refine?";
+		close2;
+		refineui();
+		end;
+	} else {
+		callfunc "refinemain","Refiner",0;
+		end;
+	}
+}

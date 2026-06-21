@@ -24,18 +24,6 @@
 // payo2,90,167,0	warp	oldpay11	2,1,pa2_in01,72,89	// disabled: payo2->pa2_in01 entrance removed
 // payo2,90,25,0	warp	oldpay12	5,3,pay_fild01,333,356	// disabled: exit to outside world (payo2 main city)
 payo2,72,114,0	warp	payo2_to_in01	1,1,pa2_in01,80,63
-// Floating indicator over the shop warp above. Shares the warp cell so the
-// icon hovers right over the portal; QTYPE_CLICKME + yellow minimap mark.
-payo2,72,114,4	script	To Shops#payo2shopsign	4_BOARD3,{
-	mes "^0055FF[ Shopping District ]^000000";
-	mes "This portal leads to the merchant area.";
-	mes "Just inside you'll find the ^8B4513Weapon Merchant^000000 and the ^8B4513Equipment Merchant^000000.";
-	close;
-
-OnInit:
-	questinfo QTYPE_CLICKME, QMARK_YELLOW;
-	end;
-}
 pa2_in01,101,25,0	warp	oldpay13	1,3,payo2,74,114
 pa2_in01,111,177,0	warp	oldpay14	2,3,pa2_in01,129,177
 pa2_in01,113,107,0	warp	oldpay15	1,2,pa2_in01,63,107
