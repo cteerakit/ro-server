@@ -194,6 +194,7 @@ pa2_in02	mapflag	nomemo
 // Guild Flags
 //############################################################################################################################################################
 
+/* payo2 guild-flag emblem NPCs disabled (payo2 NPC cleanup)
 payo2,89,155,4	script	Bright Arbor#f1-OP	722,{
 	end;
 
@@ -233,6 +234,7 @@ OnRecvCastlePy05:
 	FlagEmblem GetCastleData("payg_cas05",1);
 	end;
 }
+*/
 
 
 
@@ -368,14 +370,15 @@ pa2_in01,131,77,4	script	Falcon Master#oldpay	59,{
 pa2_in01,125,51,4	shop	Weapon Dealer#oldpay	77,1750:-1,1751:-1,1101:-1,1104:-1,1107:-1,1201:-1,1204:-1,1207:-1,1601:-1,1701:-1,1704:-1,1707:-1,1710:-1,1713:-1,1714:-1,1718:-1
 pa2_in01,134,51,4	shop	Armor Dealer#oldpay	76,2401:-1,2403:-1,2405:-1,2501:-1,2503:-1,2505:-1,2208:-1,2211:-1,2212:-1,2301:-1,2303:-1,2305:-1,2321:-1,2328:-1,2332:-1,2309:-1,2330:-1
 pa2_in02,87,34,1	shop	Tool Dealer#oldpay	75,1750:-1,1751:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,525:-1,601:-1,602:-1,1065:-1,645:-1,656:-1,657:-1
-payo2,79,124,4	shop	Tool Dealer#oldpay2	88,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,601:-1,525:-1,602:-1,1065:-1,645:-1,656:-1,657:-1
-payo2,142,104,4	shop	Pet Merchant	125,537:-1,643:-1,10013:-1,10014:-1
+// payo2,79,124,4	shop	Tool Dealer#oldpay2	88,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,601:-1,525:-1,602:-1,1065:-1,645:-1,656:-1,657:-1	// disabled (payo2 NPC cleanup)
+// payo2,142,104,4	shop	Pet Merchant	125,537:-1,643:-1,10013:-1,10014:-1	// disabled (payo2 NPC cleanup)
 //pa2_in01,84,26,4	shop	Miner	48,1010:-1,1011:-1
 
 //############################################################################################################################################################
 // People
 //############################################################################################################################################################
 
+/* payo2 flavor NPCs disabled (payo2 NPC cleanup)
 //Lady-------------------------------------------------------
 payo2,163,139,8	script	Lady#oldpay	77,{
 	mes "[Lady]";
@@ -537,6 +540,7 @@ payo2,29,116,8	script	Young Man#1oldpay	88,{
 	mes "(you notice that his pants have become wet... eeeewwwwwwwwww!!!....)";
 	close;
 }
+*/
 
 
 //<=================================================== Pub and Inn ================================================>\\
@@ -958,6 +962,7 @@ M_Menu:
 //<======================================================== Palace ==================================================>\\
 
 // Palace Guardsman (Outside)------------------------------------------------
+/* payo2 Palace Guardsman (outside) NPCs disabled (payo2 NPC cleanup)
 payo2,92,164,3	script	Palace Guardsman#1oldpay	708,{
 	mes "[Place Guardsman]";
 	mes "Halt!";
@@ -979,6 +984,7 @@ payo2,87,164,3	script	Palace Guardsman#2oldpay	708,{
 	close;
 
 }
+*/
 
 // Palace Guardsman (Inside)---------------------------------------------
 pa2_in01,69,90,4	script	Palace Guardsman#3oldpay	708,{
@@ -1157,6 +1163,7 @@ M_Menu:
 }
 
 // City Guide -------------------------------------------------
+/* payo2 City Guide NPC disabled (payo2 NPC cleanup)
 payo2,82,116,4	script	Guide#oldpay	708,{
 	cutin "pay_soldier",2;
 	mes "[Payon Soldier]";
@@ -1248,6 +1255,7 @@ M_Menu:
 		cutin "pay_soldier",255;
 		close;
 }
+*/
 
 
 //############################################################################################################################################################
@@ -1423,6 +1431,7 @@ L_Check:
 }
 
 //Blacksmith job quest: Tilpitz ======================================================
+/* payo2 Tilpitz (blacksmith quest) NPC disabled (payo2 NPC cleanup)
 payo2,151,39,4	script	Tilpitz#oldpay	59,{
 	if (BLACKSM_Q == 3) goto L_Start;
 
@@ -1484,6 +1493,7 @@ L_Start:
 		mes "More I look at it, more beautiful it gets!!! ";
 		close;
 }
+*/
 
 
 //Hunder Job Quest: Guild Master - Last Test ======================================================
@@ -1869,10 +1879,10 @@ pa2_in01,123,41,2	script	Young Man#3oldpay	89,{
 }
 
 // Mr Smile ----------------------------------------------------------------------------------------------
-payo2,84,153,4	duplicate(SmileHelper)	Smile Assistance#payold	92
+// payo2,84,153,4	duplicate(SmileHelper)	Smile Assistance#payold	92	// disabled (payo2 NPC cleanup)
 
 // Bunny Band --------------------------------------------------------------------------------------------
-payo2,97,116,4	duplicate(bunny)	Kafra Employee#bunnyold	83
+// payo2,97,116,4	duplicate(bunny)	Kafra Employee#bunnyold	83	// disabled (payo2 NPC cleanup)
 
 
 // Juice Maker -------------------------------------------------------------------------------------------
