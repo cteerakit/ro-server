@@ -3,6 +3,7 @@ char_ip: ro.hopto.org
 pincode_enabled: no
 char_del_delay: 0
 bind_ip: 0.0.0.0
+server_name: Ragnarok Sundown
 
 // conf/char_athena.conf - spawn all new characters at payo2 90,119
 start_point: payo2,90,119
