@@ -1,0 +1,55 @@
+###########################################################################
+# Level Penalty Database (import override)
+###########################################################################
+# Overrides db/re/level_penalty.yml. Loaded last via the Footer Imports in
+# db/level_penalty.yml, so entries here replace the matching Difference keys
+# from the base file.
+#
+# Difference = monster_level - player_level (see pc_level_penalty_mod in
+# src/map/pc.cpp). NEGATIVE = player is ABOVE the monster, i.e. the
+# "farming low-level mobs" case.
+#
+# We only retune the negative (out-leveling) side of the Exp penalty. The
+# positive side (fighting tougher mobs) and the entire Drop table are left to
+# the base file.
+#
+# Full EXP is kept for the first 5 levels above the mob; the falloff past that
+# is gentle. Gap-fill (loadingFinished) carries each defined value outward
+# toward more negative differences, so these thresholds expand to:
+#   you are 0-5 lvls above mob -> 100%
+#               6-7 above      ->  90%
+#               8-10 above     ->  80%
+#               11-12 above    ->  70%
+#               13-15 above    ->  55%
+#               16-20 above    ->  40%
+#               21-25 above    ->  25%
+#               26-30 above    ->  12%
+#               31+ above      ->   5%
+#
+# We re-list the base file's negative keys (-6, -11, -16, -21, -26, -31) so
+# they don't leave non-monotonic spikes after gap-fill.
+###########################################################################
+
+Header:
+  Type: PENALTY_DB
+  Version: 1
+
+Body:
+  - Type: Exp
+    LevelDifferences:
+      - Difference: -6
+        Rate: 90
+      - Difference: -8
+        Rate: 80
+      - Difference: -11
+        Rate: 70
+      - Difference: -13
+        Rate: 55
+      - Difference: -16
+        Rate: 40
+      - Difference: -21
+        Rate: 25
+      - Difference: -26
+        Rate: 12
+      - Difference: -31
+        Rate: 5

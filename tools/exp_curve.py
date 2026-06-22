@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
-"""Flatten the EXP curves in db/re/job_exp.yml from the pristine original.
+"""Flatten the EXP curves into the JobDatabase import override.
 
 The official renewal curve grows near-exponentially, so high levels take
 disproportionately longer than low levels. This script reads the official curves
-from the pristine ``db/re/job_exp.yml.orig`` backup and rewrites the ``BaseExp``
-and ``JobExp`` values, compressing each curve's dynamic range while preserving
-its monotonic shape and each list's level-1 anchor.
+from the pristine ``db/re/job_exp.yml.orig`` backup and writes the flattened
+``BaseExp`` / ``JobExp`` values to ``db/import/job_stats.yml`` (the JobDatabase
+import override, loaded after the base ``db/re/job_exp.yml``), compressing each
+curve's dynamic range while preserving its monotonic shape and level-1 anchor.
+
+The base file ``db/re/job_exp.yml`` is left at the official upstream curve; only
+the import override is written, mirroring how config overrides live under
+``conf/import/``.
 
 For every BaseExp / JobExp list, anchored on its level-1 value E1:
 
@@ -19,8 +24,10 @@ that sentinel directly would leave an artificial jump at the top, so the cap is
 first replaced with a value extrapolated from the geometric trend of the two
 preceding levels, then flattened like any other level.
 
-The script always reads from the ".orig" copy (created on first run), so it is
-idempotent and safe to re-run with a different FLATTEN_K.
+The script always reads from db/re/job_exp.yml.orig, so it is idempotent and
+safe to re-run with a different FLATTEN_K. Note: regenerating rewrites
+db/import/job_stats.yml verbatim from the pristine structure, so any manual
+header edits in that file are not preserved.
 """
 
 import os
@@ -34,8 +41,10 @@ FLATTEN_K = 0.5
 # ---------------------------------------------------------------------------
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TARGET = os.path.join(REPO_ROOT, "db", "re", "job_exp.yml")
-PRISTINE = TARGET + ".orig"
+# Pristine upstream curve (read-only source); the base file is kept untouched.
+PRISTINE = os.path.join(REPO_ROOT, "db", "re", "job_exp.yml.orig")
+# Flattened output goes to the JobDatabase import override slot.
+TARGET = os.path.join(REPO_ROOT, "db", "import", "job_stats.yml")
 
 JOBS_RE = re.compile(r"^\s*-\s*Jobs:\s*$")
 LEVEL_RE = re.compile(r"^(\s*)-\s*Level:\s*(\d+)\s*$")
