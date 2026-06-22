@@ -41,7 +41,7 @@ import re
 # curves are flattened independently so job leveling can be paced separately from
 # base leveling.
 BASE_FLATTEN_K = 0.5
-JOB_FLATTEN_K = 0.45
+JOB_FLATTEN_K = 0.48
 # ---------------------------------------------------------------------------
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
