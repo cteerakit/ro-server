@@ -55,11 +55,13 @@ party_even_share_bonus: 100
 feature.bgqueue: off
 
 // conf/battle/exp.conf
-// 50x EXP multiplier (5000 = 50x). Stacks with the flattened curve in
-// db/re/job_exp.yml (see tools/exp_curve.py).
-base_exp_rate: 5000
-job_exp_rate: 5000
-mvp_exp_rate: 5000
-quest_exp_rate: 5000
+// 10x EXP multiplier (1000 = 10x). Lowered from 50x: the base curve is now
+// flattened harder (single-exponent p=0.5 from the original, see
+// tools/exp_curve.py), so the lower rate slows the early game while the flatter
+// curve keeps the late game faster. mvp_exp_rate left at 2500 (25x).
+base_exp_rate: 1000
+job_exp_rate: 1000
+mvp_exp_rate: 1000
+quest_exp_rate: 1000
 // Extra EXP per additional attacker on a monster (default 25).
 exp_bonus_attacker: 100
