@@ -22,6 +22,7 @@ Body:
       autotrade: true
       channel: true
       storage: true
+      partyrecall: true
       mobinfo: true
       iteminfo: true
       whodrops: true
