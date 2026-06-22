@@ -41,7 +41,7 @@ import re
 # curves are flattened independently so job leveling can be paced separately from
 # base leveling.
 BASE_FLATTEN_K = 0.5
-JOB_FLATTEN_K = 0.48
+JOB_FLATTEN_K = 0.475
 # ---------------------------------------------------------------------------
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -58,6 +58,12 @@ MAXBASE_RE = re.compile(r"^\s*MaxBaseLevel:\s*(\d+)\s*$")
 MAXJOB_RE = re.compile(r"^\s*MaxJobLevel:\s*(\d+)\s*$")
 BASEEXP_RE = re.compile(r"^\s*BaseExp:\s*$")
 JOBEXP_RE = re.compile(r"^\s*JobExp:\s*$")
+
+# Job curves to preview after a run, keyed by (MaxJobLevel, level-1 anchor).
+JOB_PREVIEW_LABELS = {
+    (50, 100): "50-cap job curve (High 1st, anchor 100)",
+    (70, 1354): "70-cap job curve (High 2nd trans, anchor 1354)",
+}
 
 
 def flatten(orig, anchor, k):
@@ -85,6 +91,7 @@ def main():
     prev2_orig = None     # original Exp two levels back
 
     preview = []          # (level, orig, new) rows for the 275-cap base curve
+    job_preview = {}      # {(cap, anchor): [(level, orig, new), ...]} for select job curves
 
     for line in lines:
         if JOBS_RE.match(line):
@@ -160,6 +167,8 @@ def main():
 
             if section == "base" and cap == 275:
                 preview.append((level, orig, new))
+            elif section == "job" and (cap, anchor) in JOB_PREVIEW_LABELS:
+                job_preview.setdefault((cap, anchor), []).append((level, orig, new))
             continue
 
         out.append(line)
@@ -178,6 +187,19 @@ def main():
         for level, orig, new in preview:
             if level in sample_levels:
                 print(f"  {level:>4} | {orig:>15,} -> {new:>15,}")
+
+    for (cap, anchor), label in JOB_PREVIEW_LABELS.items():
+        rows = job_preview.get((cap, anchor))
+        if not rows:
+            continue
+        # Show level 1, the cap, and a spread in between.
+        sample_levels = {1, 10, 25, cap // 2, cap - 1, cap}
+        total = sum(new for _, _, new in rows[:-1])  # cumulative to reach the cap
+        print(f"\nPreview ({label}): level | original -> new")
+        for level, orig, new in rows:
+            if level in sample_levels:
+                print(f"  {level:>4} | {orig:>15,} -> {new:>15,}")
+        print(f"  cumulative EXP to reach Job {cap}: {total:,}")
 
 
 if __name__ == "__main__":
