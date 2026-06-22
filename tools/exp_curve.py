@@ -2,21 +2,26 @@
 """Flatten the EXP curves into the JobDatabase import override.
 
 The official renewal curve grows near-exponentially, so high levels take
-disproportionately longer than low levels. This script reads the official curves
-from the pristine ``db/re/job_exp.yml.orig`` backup and writes the flattened
-``BaseExp`` / ``JobExp`` values to ``db/import/job_stats.yml`` (the JobDatabase
-import override, loaded after the base ``db/re/job_exp.yml``), compressing each
-curve's dynamic range while preserving its monotonic shape and level-1 anchor.
+disproportionately longer than low levels. This script reads the original curves
+from ``db/re/job_exp.yml`` and writes the flattened ``BaseExp`` / ``JobExp``
+values to ``db/import/job_stats.yml`` (the JobDatabase import override, loaded
+after the base ``db/re/job_exp.yml``), compressing each curve's dynamic range
+while preserving its monotonic shape and level-1 anchor.
 
-The base file ``db/re/job_exp.yml`` is left at the official upstream curve; only
-the import override is written, mirroring how config overrides live under
-``conf/import/``.
+``db/re/job_exp.yml`` is the single source of truth and must hold the original
+(un-flattened) curve. This script only reads it and only writes the separate
+import override, so it can never compound the flattening on top of its own
+output, mirroring how config overrides live under ``conf/import/``.
 
 For every BaseExp / JobExp list, anchored on its level-1 value E1:
 
-    NewExp(n) = round( E1 * (OrigExp(n) / E1) ** FLATTEN_K )
+    NewExp(n) = round( E1 * (OrigExp(n) / E1) ** K )
 
-with FLATTEN_K < 1.0 (lower = flatter; 1.0 reproduces the official curve).
+with K < 1.0 (lower = flatter; 1.0 reproduces the official curve). The base and
+job curves use separate exponents (BASE_FLATTEN_K / JOB_FLATTEN_K) so job
+leveling can be flattened more aggressively than base leveling. With
+BASE_FLATTEN_K=0.5 / JOB_FLATTEN_K=0.4, the trans 2-2 curve reaches Job 70 at
+roughly the same cumulative EXP as Base 90.
 
 Cap level "follows the curve": the source stores each list's max level as a
 sentinel (e.g. 999 / 99999 / 9999999 / 999999999 / 999999999999). Flattening
@@ -24,25 +29,27 @@ that sentinel directly would leave an artificial jump at the top, so the cap is
 first replaced with a value extrapolated from the geometric trend of the two
 preceding levels, then flattened like any other level.
 
-The script always reads from db/re/job_exp.yml.orig, so it is idempotent and
-safe to re-run with a different FLATTEN_K. Note: regenerating rewrites
-db/import/job_stats.yml verbatim from the pristine structure, so any manual
-header edits in that file are not preserved.
+The script always reads from db/re/job_exp.yml, so it is idempotent and safe to
+re-run with different exponents. Note: regenerating rewrites
+db/import/job_stats.yml verbatim from the source structure, so any manual header
+edits in that file are not preserved.
 """
 
 import os
 import re
-import shutil
 
 # --- Tunables --------------------------------------------------------------
-# Compression exponent applied to both base and job curves. 1.0 = official
-# shape, lower = flatter.
-FLATTEN_K = 0.5
+# Compression exponents. 1.0 = official shape, lower = flatter. Base and job
+# curves are flattened independently so job leveling can be made faster than
+# base leveling. JOB_FLATTEN_K=0.4 syncs trans 2-2 Job 70 to ~Base 90.
+BASE_FLATTEN_K = 0.5
+JOB_FLATTEN_K = 0.4
 # ---------------------------------------------------------------------------
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# Pristine upstream curve (read-only source); the base file is kept untouched.
-PRISTINE = os.path.join(REPO_ROOT, "db", "re", "job_exp.yml.orig")
+# Original curve and single source of truth. Must hold the un-flattened values;
+# this script only reads it and never writes to it.
+SOURCE = os.path.join(REPO_ROOT, "db", "re", "job_exp.yml")
 # Flattened output goes to the JobDatabase import override slot.
 TARGET = os.path.join(REPO_ROOT, "db", "import", "job_stats.yml")
 
@@ -55,21 +62,18 @@ BASEEXP_RE = re.compile(r"^\s*BaseExp:\s*$")
 JOBEXP_RE = re.compile(r"^\s*JobExp:\s*$")
 
 
-def flatten(orig, anchor):
+def flatten(orig, anchor, k):
     """Single-exponent compression anchored on the level-1 value. Returns int >= 1."""
     if orig <= anchor:
         return orig
-    return max(1, round(anchor * (orig / anchor) ** FLATTEN_K))
+    return max(1, round(anchor * (orig / anchor) ** k))
 
 
 def main():
-    if not os.path.exists(PRISTINE):
-        if not os.path.exists(TARGET):
-            raise SystemExit(f"Cannot find {TARGET}")
-        shutil.copyfile(TARGET, PRISTINE)
-        print(f"Created pristine backup: {PRISTINE}")
+    if not os.path.exists(SOURCE):
+        raise SystemExit(f"Cannot find source curve {SOURCE}")
 
-    with open(PRISTINE, "r", encoding="utf-8", newline="") as fh:
+    with open(SOURCE, "r", encoding="utf-8", newline="") as fh:
         lines = fh.readlines()
 
     out = []
@@ -149,7 +153,8 @@ def main():
             if cap is not None and level == cap and prev_orig and prev2_orig:
                 orig_eff = max(prev_orig + 1, round(prev_orig * prev_orig / prev2_orig))
 
-            new = flatten(orig_eff, anchor)
+            k = BASE_FLATTEN_K if section == "base" else JOB_FLATTEN_K
+            new = flatten(orig_eff, anchor, k)
             out.append(f"{indent}Exp: {new}\n")
 
             prev2_orig = prev_orig
@@ -164,7 +169,10 @@ def main():
     with open(TARGET, "w", encoding="utf-8", newline="") as fh:
         fh.writelines(out)
 
-    print(f"Rewrote {TARGET} base + job curves with FLATTEN_K={FLATTEN_K}")
+    print(
+        f"Rewrote {TARGET} curves with "
+        f"BASE_FLATTEN_K={BASE_FLATTEN_K}, JOB_FLATTEN_K={JOB_FLATTEN_K}"
+    )
 
     if preview:
         sample_levels = {1, 50, 99, 150, 199, 274, 275}
