@@ -110,6 +110,38 @@ pa2_in02	mapflag	nomemo
 
 
 //############################################################################################################################################################
+// PVP Warper
+//############################################################################################################################################################
+
+payo2,77,128,4	script	PVP Warper#oldpay	105,{
+	mes "[PVP Warper]";
+	mes "Looking for a fight?";
+	mes "I can send you into a";
+	mes "Player vs. Player arena.";
+	next;
+	setarray .@maps$[0],"pvp_n_1-1","pvp_n_2-1","pvp_n_3-1","pvp_n_4-1","pvp_n_5-1";
+	setarray .@names$[0],"Sandwich","Lock On","Four Room","Under Cross","Compass Room";
+	.@menu$ = "";
+	for (.@i = 0; .@i < getarraysize(.@maps$); .@i++)
+		.@menu$ += .@names$[.@i] + " [" + getmapusers(.@maps$[.@i]) + "]:";
+	.@menu$ += "Cancel";
+	.@sel = select(.@menu$) - 1;
+	if (.@sel == getarraysize(.@maps$)) {
+		mes "[PVP Warper]";
+		mes "Come back when you're";
+		mes "ready to rumble.";
+		close;
+	}
+	mes "[PVP Warper]";
+	mes "Good luck in ^FF0000" + .@names$[.@sel] + "^000000!";
+	close2;
+	warp .@maps$[.@sel],0,0;
+	end;
+}
+
+
+
+//############################################################################################################################################################
 // Guild Flags
 //############################################################################################################################################################
 
