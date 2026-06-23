@@ -59,10 +59,10 @@ feature.bgqueue: off
 // (single-exponent p=0.5 from the original) via tools/exp_curve.py, applied as
 // an override in db/import/job_stats.yml, so the lower rate slows the early
 // game while the flatter curve keeps the late game faster.
-base_exp_rate: 1000
-job_exp_rate: 1000
-mvp_exp_rate: 1000
-quest_exp_rate: 1000
+base_exp_rate: 500
+job_exp_rate: 500
+mvp_exp_rate: 500
+quest_exp_rate: 500
 // Extra EXP per additional attacker on a monster (default 25).
 exp_bonus_attacker: 100
 // Disable death penalty entirely (0 = no EXP loss on death).
