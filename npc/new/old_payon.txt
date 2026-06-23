@@ -119,7 +119,7 @@ payo2,77,128,4	script	PVP Warper#oldpay	105,{
 	mes "I can send you into a";
 	mes "Player vs. Player arena.";
 	next;
-	setarray .@maps$[0],"pvp_n_1-1","pvp_n_2-1","pvp_n_3-1","pvp_n_4-1","pvp_n_5-1";
+	setarray .@maps$[0],"pvp_n_1-1","pvp_n_1-2","pvp_n_1-3","pvp_n_1-4","pvp_n_1-5";
 	setarray .@names$[0],"Sandwich","Lock On","Four Room","Under Cross","Compass Room";
 	.@menu$ = "";
 	for (.@i = 0; .@i < getarraysize(.@maps$); .@i++)
