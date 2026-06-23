@@ -2029,23 +2029,23 @@ Body:
       - Level: 1
         Exp: 10
       - Level: 2
-        Exp: 27
+        Exp: 13
       - Level: 3
-        Exp: 59
+        Exp: 17
       - Level: 4
-        Exp: 108
+        Exp: 20
       - Level: 5
-        Exp: 446
+        Exp: 30
       - Level: 6
-        Exp: 1065
+        Exp: 39
       - Level: 7
-        Exp: 1802
+        Exp: 45
       - Level: 8
-        Exp: 2858
+        Exp: 52
       - Level: 9
-        Exp: 4303
+        Exp: 58
       - Level: 10
-        Exp: 6470
+        Exp: 66
   - Jobs:
       Novice_High: true
     MaxJobLevel: 10
@@ -2053,23 +2053,23 @@ Body:
       - Level: 1
         Exp: 11
       - Level: 2
-        Exp: 31
+        Exp: 15
       - Level: 3
-        Exp: 65
+        Exp: 18
       - Level: 4
-        Exp: 119
+        Exp: 22
       - Level: 5
-        Exp: 490
+        Exp: 33
       - Level: 6
-        Exp: 1171
+        Exp: 43
       - Level: 7
-        Exp: 1990
+        Exp: 50
       - Level: 8
-        Exp: 3147
+        Exp: 57
       - Level: 9
-        Exp: 4733
+        Exp: 64
       - Level: 10
-        Exp: 7114
+        Exp: 72
   - Jobs:
       Swordman: true
       Mage: true

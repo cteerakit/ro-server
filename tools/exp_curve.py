@@ -70,7 +70,6 @@ JOB_FLATTEN_K_DEFAULT = 0.5
 # leveling this tier (Novice = normal base-99, Novice_High = trans base-99,
 # Rune_Knight = 3rd base-200, Dragon_Knight = 4th base-275, Summoner = base-200).
 JOB_TARGETS = {
-    "Novice":        ("Novice",        1,   10),
     "Swordman":      ("Novice",        10,  60),
     "Knight":        ("Novice",        60,  90),
     "Lord_Knight":   ("Novice_High",   60,  90),
@@ -87,7 +86,6 @@ JOB_FLATTEN_K_MIRROR = {
     "Star_Gladiator": "Knight",
     "Gunslinger":     "Lord_Knight",
     "Kagerou":        "Lord_Knight",
-    "Novice_High":    "Novice",
 }
 
 # Binary-search bounds for the solved K.
