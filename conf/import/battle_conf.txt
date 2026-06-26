@@ -11,29 +11,29 @@ restart_hp_rate: 100
 restart_sp_rate: 100
 
 // conf/battle/drops.conf
-// 5x drop rate across the board (100 = official 1x). Logarithmic scaling
+// 60x drop rate across the board (100 = official 1x). Logarithmic scaling
 // (item_logarithmic_drops) keeps rare drops from approaching 100%.
 // Normal monsters
-item_rate_common: 1000
-item_rate_equip: 1000
-item_rate_card: 1000
-item_rate_heal: 1000
-item_rate_use: 1000
+item_rate_common: 6000
+item_rate_equip: 6000
+item_rate_card: 6000
+item_rate_heal: 6000
+item_rate_use: 6000
 // Boss-class monsters
-item_rate_common_boss: 1000
-item_rate_equip_boss: 1000
-item_rate_card_boss: 1000
-item_rate_heal_boss: 1000
-item_rate_use_boss: 1000
+item_rate_common_boss: 6000
+item_rate_equip_boss: 6000
+item_rate_card_boss: 6000
+item_rate_heal_boss: 6000
+item_rate_use_boss: 6000
 // MVP drops
-item_rate_common_mvp: 1000
-item_rate_equip_mvp: 1000
-item_rate_card_mvp: 1000
-item_rate_heal_mvp: 1000
-item_rate_use_mvp: 1000
-item_rate_mvp: 1000
+item_rate_common_mvp: 6000
+item_rate_equip_mvp: 6000
+item_rate_card_mvp: 6000
+item_rate_heal_mvp: 6000
+item_rate_use_mvp: 6000
+item_rate_mvp: 6000
 // Treasure boxes
-item_rate_treasure: 1000
+item_rate_treasure: 6000
 // Scale drop rates logarithmically so high multipliers don't push rare
 // drops to near-100%; tames the effect of our boosted item_rate_* values.
 item_logarithmic_drops: yes
