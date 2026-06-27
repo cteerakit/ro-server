@@ -16,14 +16,7 @@
 ba_maison,120,320,0	script	#herbs_chk	HIDDEN_WARP_NPC,3,3,{
 	end;
 OnTouch:
-	//You can start this quest without registering on alpha
-	if (isbegin_quest(12497) == 0) {	// story
-		cloakoffnpcself( "#he_admin1" );
-		specialeffect EF_WHITEBODY, AREA, "#he_admin1";
-		npctalk "Stand back from the perimeter of the security area. Outsiders are prohibited from accessing it.", "#he_admin1", bc_self;
-		end;
-	}
-	// daily
+	// always daily
 	cloakoffnpcself( "#he_admin2" );
 	specialeffect EF_WHITEBODY, AREA, "#he_admin2";
 	end;
@@ -77,10 +70,10 @@ ba_maison,120,321,5	script(CLOAKED)	#he_admin1	MD_ASSISTANT,{
 }
 
 ba_maison,120,321,5	script(CLOAKED)	#he_admin2	MD_ASSISTANT,{
-	if (ep17_2_main < 1)
-		end;
-	if (isbegin_quest(12497) != 2)
-		end;
+	// if (ep17_2_main < 1)
+	// 	end;
+	// if (isbegin_quest(12497) != 2)
+	// 	end;
 	switch( checkquest(12498,PLAYTIME) ) {
 	case -1:
 		break;
@@ -2091,8 +2084,11 @@ OnTouch:	// unknown effect
 	mes "[Sigma]";
 	mes "I'll show you the way out. What will you do?";
 	next;
-	if (select( "I'll look around more.", "I'll leave." ) == 2)
+	if (select( "I'll look around more.", "I'll leave." ) == 2) {
+		getitem 25669,10; // QoL Varmeal Tickets reward
+		getexp 5000000,1000000;
 		warp "ba_maison",136,309;
+	}
 	end;
 }
 

@@ -1908,6 +1908,7 @@ OnTouch:
 		setquest 9337;// Wrapping up the Adventure
 		getitem 607,1;// Yggdrasilberry
 		getitem 608,1;// Seed_Of_Yggdrasil
+		getitem 6803,5; // QoL Gigantes Shards reward
 		close2;
 		cutin "",255;
 		end;

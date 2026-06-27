@@ -1096,8 +1096,8 @@ OnTimer5000:
 		getexp 250000,250000;
 	}
 	mes "This item has an extraordinary aura with it. Can be very useful for someone special.";
-	getitem 6607,1;// Temporal_Crystal
-	getitem 6608,1;// Coagulated_Spell
+	getitem 6607,5;// Temporal_Crystal (QoL Increase)
+	getitem 6608,5;// Coagulated_Spell (QoL Increase)
 	close3;
 }
 
@@ -2034,8 +2034,8 @@ OnTimer10000:
 			getexp 350000,350000;
 		}
 		else {
-			getitem 6607,1;// Temporal_Crystal
-			getitem 6608,1;// Coagulated_Spell
+			getitem 6607,5;// Temporal_Crystal (QoL Increase)
+			getitem 6608,5;// Coagulated_Spell (QoL Increase)
 		}
 		next;
 		mes "[Hugin]";

@@ -827,28 +827,28 @@ Body:
             Rate: 875
           - Index: 1
             Item: Fourth_Bh_Sword
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_1h_Nindo
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Edge
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_1h_Book
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_1h_Rod
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_1h_Spear
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Bh_Staff
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_1h_Wand
-            Rate: 50
+            Rate: 200
       - Monster: CHIMERA_FULGOR
         Drops:
           - Index: 0
@@ -856,28 +856,28 @@ Body:
             Rate: 875
           - Index: 1
             Item: Fourth_Bh_Sword
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_1h_Nindo
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Edge
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_1h_Book
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_1h_Rod
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_1h_Spear
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Bh_Staff
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_1h_Wand
-            Rate: 50
+            Rate: 200
       - Monster: CHIMERA_NAPEO
         Drops:
           - Index: 0
@@ -885,28 +885,28 @@ Body:
             Rate: 875
           - Index: 1
             Item: Fourth_Bh_Sword
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_1h_Nindo
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Edge
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_1h_Book
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_1h_Rod
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_1h_Spear
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Bh_Staff
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_1h_Wand
-            Rate: 50
+            Rate: 200
       - Monster: CHIMERA_GALENSIS
         Drops:
           - Index: 0
@@ -914,28 +914,28 @@ Body:
             Rate: 875
           - Index: 1
             Item: Fourth_Bh_Sword
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_1h_Nindo
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Edge
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_1h_Book
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_1h_Rod
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_1h_Spear
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Bh_Staff
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_1h_Wand
-            Rate: 50
+            Rate: 200
       - Monster: CHIMERA_THEONE
         Drops:
           - Index: 0
@@ -977,16 +977,16 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Bh_Sword
-            Rate: 150
+            Rate: 250
           - Index: 2
             Item: Fourth_1h_Book
-            Rate: 150
+            Rate: 250
           - Index: 3
             Item: Fourth_1h_Spear
-            Rate: 150
+            Rate: 250
           - Index: 4
             Item: Fourth_Bh_Staff
-            Rate: 150
+            Rate: 250
       - Monster: CHIMERA_LITUS
         Drops:
           - Index: 0
@@ -994,16 +994,16 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Bh_Sword
-            Rate: 150
+            Rate: 250
           - Index: 2
             Item: Fourth_1h_Book
-            Rate: 150
+            Rate: 250
           - Index: 3
             Item: Fourth_1h_Spear
-            Rate: 150
+            Rate: 250
           - Index: 4
             Item: Fourth_Bh_Staff
-            Rate: 150
+            Rate: 250
       - Monster: CHIMERA_FILLIA
         Drops:
           - Index: 0
@@ -1011,16 +1011,16 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Bh_Sword
-            Rate: 150
+            Rate: 250
           - Index: 2
             Item: Fourth_1h_Book
-            Rate: 150
+            Rate: 250
           - Index: 3
             Item: Fourth_1h_Spear
-            Rate: 150
+            Rate: 250
           - Index: 4
             Item: Fourth_Bh_Staff
-            Rate: 150
+            Rate: 250
       - Monster: CHIMERA_VANILAQUS
         Drops:
           - Index: 0
@@ -1028,16 +1028,16 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Bh_Sword
-            Rate: 150
+            Rate: 250
           - Index: 2
             Item: Fourth_1h_Book
-            Rate: 150
+            Rate: 250
           - Index: 3
             Item: Fourth_1h_Spear
-            Rate: 150
+            Rate: 250
           - Index: 4
             Item: Fourth_Bh_Staff
-            Rate: 150
+            Rate: 250
   - Map: sp_rudus4
     SpecificDrops:
       - Monster: GIANT_CAPUT
@@ -1047,34 +1047,34 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Grenade
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_Bh_Bow
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Knuckle
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_Bh_Lute
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_Rifle
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_Revolver
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Shotgun
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_Bh_Fuuma
-            Rate: 50
+            Rate: 200
           - Index: 9
             Item: Fourth_Gatling
-            Rate: 50
+            Rate: 200
           - Index: 10
             Item: Fourth_1h_Whip
-            Rate: 50
+            Rate: 200
       - Monster: DOLORIAN
         Drops:
           - Index: 0
@@ -1082,34 +1082,34 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Grenade
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_Bh_Bow
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Knuckle
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_Bh_Lute
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_Rifle
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_Revolver
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Shotgun
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_Bh_Fuuma
-            Rate: 50
+            Rate: 200
           - Index: 9
             Item: Fourth_Gatling
-            Rate: 50
+            Rate: 200
           - Index: 10
             Item: Fourth_1h_Whip
-            Rate: 50
+            Rate: 200
       - Monster: PLAGARION
         Drops:
           - Index: 0
@@ -1117,34 +1117,34 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Grenade
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_Bh_Bow
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Knuckle
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_Bh_Lute
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_Rifle
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_Revolver
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Shotgun
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_Bh_Fuuma
-            Rate: 50
+            Rate: 200
           - Index: 9
             Item: Fourth_Gatling
-            Rate: 50
+            Rate: 200
           - Index: 10
             Item: Fourth_1h_Whip
-            Rate: 50
+            Rate: 200
       - Monster: DEADRE
         Drops:
           - Index: 0
@@ -1152,34 +1152,34 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Grenade
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_Bh_Bow
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Knuckle
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_Bh_Lute
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_Rifle
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_Revolver
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Shotgun
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_Bh_Fuuma
-            Rate: 50
+            Rate: 200
           - Index: 9
             Item: Fourth_Gatling
-            Rate: 50
+            Rate: 200
           - Index: 10
             Item: Fourth_1h_Whip
-            Rate: 50
+            Rate: 200
       - Monster: VENEDI
         Drops:
           - Index: 0
@@ -1187,34 +1187,34 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Grenade
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_Bh_Bow
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Knuckle
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_Bh_Lute
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_Rifle
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_Revolver
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Shotgun
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_Bh_Fuuma
-            Rate: 50
+            Rate: 200
           - Index: 9
             Item: Fourth_Gatling
-            Rate: 50
+            Rate: 200
           - Index: 10
             Item: Fourth_1h_Whip
-            Rate: 50
+            Rate: 200
       - Monster: R001_BESTIA
         Drops:
           - Index: 0
@@ -1262,19 +1262,19 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Bh_Axe
-            Rate: 150
+            Rate: 250
           - Index: 2
             Item: Fourth_1h_Sword
-            Rate: 150
+            Rate: 250
           - Index: 3
             Item: Fourth_1h_Mace
-            Rate: 150
+            Rate: 250
           - Index: 4
             Item: Fourth_1h_Dagger
-            Rate: 150
+            Rate: 250
           - Index: 5
             Item: Fourth_Bh_Katar
-            Rate: 150
+            Rate: 250
       - Monster: BRUTAL_MURDERER
         Drops:
           - Index: 0
@@ -1282,19 +1282,19 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Bh_Axe
-            Rate: 150
+            Rate: 250
           - Index: 2
             Item: Fourth_1h_Sword
-            Rate: 150
+            Rate: 250
           - Index: 3
             Item: Fourth_1h_Mace
-            Rate: 150
+            Rate: 250
           - Index: 4
             Item: Fourth_1h_Dagger
-            Rate: 150
+            Rate: 250
           - Index: 5
             Item: Fourth_Bh_Katar
-            Rate: 150
+            Rate: 250
       - Monster: GHOST_CUBE
         Drops:
           - Index: 0
@@ -1302,19 +1302,19 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Bh_Axe
-            Rate: 150
+            Rate: 250
           - Index: 2
             Item: Fourth_1h_Sword
-            Rate: 150
+            Rate: 250
           - Index: 3
             Item: Fourth_1h_Mace
-            Rate: 150
+            Rate: 250
           - Index: 4
             Item: Fourth_1h_Dagger
-            Rate: 150
+            Rate: 250
           - Index: 5
             Item: Fourth_Bh_Katar
-            Rate: 150
+            Rate: 250
       - Monster: LUDE_GAL
         Drops:
           - Index: 0
@@ -1322,19 +1322,19 @@ Body:
             Rate: 750
           - Index: 1
             Item: Fourth_Bh_Axe
-            Rate: 150
+            Rate: 250
           - Index: 2
             Item: Fourth_1h_Sword
-            Rate: 150
+            Rate: 250
           - Index: 3
             Item: Fourth_1h_Mace
-            Rate: 150
+            Rate: 250
           - Index: 4
             Item: Fourth_1h_Dagger
-            Rate: 150
+            Rate: 250
           - Index: 5
             Item: Fourth_Bh_Katar
-            Rate: 150
+            Rate: 250
   - Map: nif_dun02
     SpecificDrops:
       - Monster: DISGUISER
@@ -1344,28 +1344,28 @@ Body:
             Rate: 875
           - Index: 1
             Item: Fourth_Bh_Axe
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_1h_Sword
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Manual
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_1h_Mace
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_1h_Dagger
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_1h_Nindo2
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Bh_Katar
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_1h_Plant
-            Rate: 50
+            Rate: 200
       - Monster: BLUEMOON_LOLI_RURI
         Drops:
           - Index: 0
@@ -1373,28 +1373,28 @@ Body:
             Rate: 875
           - Index: 1
             Item: Fourth_Bh_Axe
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_1h_Sword
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Manual
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_1h_Mace
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_1h_Dagger
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_1h_Nindo2
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Bh_Katar
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_1h_Plant
-            Rate: 50
+            Rate: 200
       - Monster: GROTE
         Drops:
           - Index: 0
@@ -1402,28 +1402,28 @@ Body:
             Rate: 875
           - Index: 1
             Item: Fourth_Bh_Axe
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_1h_Sword
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Manual
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_1h_Mace
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_1h_Dagger
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_1h_Nindo2
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Bh_Katar
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_1h_Plant
-            Rate: 50
+            Rate: 200
       - Monster: PIERROTZOIST
         Drops:
           - Index: 0
@@ -1431,28 +1431,28 @@ Body:
             Rate: 875
           - Index: 1
             Item: Fourth_Bh_Axe
-            Rate: 50
+            Rate: 200
           - Index: 2
             Item: Fourth_1h_Sword
-            Rate: 50
+            Rate: 200
           - Index: 3
             Item: Fourth_1h_Manual
-            Rate: 50
+            Rate: 200
           - Index: 4
             Item: Fourth_1h_Mace
-            Rate: 50
+            Rate: 200
           - Index: 5
             Item: Fourth_1h_Dagger
-            Rate: 50
+            Rate: 200
           - Index: 6
             Item: Fourth_1h_Nindo2
-            Rate: 50
+            Rate: 200
           - Index: 7
             Item: Fourth_Bh_Katar
-            Rate: 50
+            Rate: 200
           - Index: 8
             Item: Fourth_1h_Plant
-            Rate: 50
+            Rate: 200
       - Monster: DEATH_WITCH
         Drops:
           - Index: 0
@@ -1567,7 +1567,7 @@ Body:
             RandomOptionGroup: PONTIFEX_COURAGE
           - Index: 19
             Item: Ep18_Amethyst_Fragment
-            Rate: 20000
+            Rate: 100000
           - Index: 20
             Item: Pontifex_Courage
             Rate: 10000
@@ -1661,7 +1661,7 @@ Body:
             RandomOptionGroup: PONTIFEX_WISDOM
           - Index: 20
             Item: Ep18_Amethyst_Fragment
-            Rate: 20000
+            Rate: 100000
           - Index: 21
             Item: Pontifex_Courage
             Rate: 10000
@@ -1691,10 +1691,10 @@ Body:
         Drops:
           - Index: 0
             Item: Purificatory_Holy_O
-            Rate: 50000
+            Rate: 100000
           - Index: 1
             Item: Purificatory_Holy_W
-            Rate: 50000
+            Rate: 100000
           - Index: 2
             Item: Pontifex_Belief
             Rate: 40000
@@ -1787,10 +1787,10 @@ Body:
         Drops:
           - Index: 0
             Item: Purificatory_Holy_O
-            Rate: 50000
+            Rate: 100000
           - Index: 1
             Item: Purificatory_Holy_W
-            Rate: 50000
+            Rate: 100000
           - Index: 2
             Item: Pontifex_Belief
             Rate: 40000
@@ -1925,94 +1925,94 @@ Body:
         Drops:
           - Index: 0
             Item: Excalibur_IL
-            Rate: 10
+            Rate: 100
             RandomOptionGroup: ILL_MAGIC_NORMAL
           - Index: 1
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
       - Monster: ILL_SOLDIER_ANDR
         Drops:
           - Index: 0
             Item: Doom_Slayer_IL
-            Rate: 10
+            Rate: 100
             RandomOptionGroup: ILL_PHYSIC_NORMAL
           - Index: 1
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
           - Index: 2
             Item: Twins_Box_IL
-            Rate: 5
+            Rate: 35
       - Monster: ILL_ANDRE_LARVA
         Drops:
           - Index: 0
             Item: Guard_IL
-            Rate: 5
+            Rate: 50
           - Index: 1
             Item: Sprint_Glove_IL
-            Rate: 5
+            Rate: 50
           - Index: 2
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
       - Monster: ILL_DENIRO
         Drops:
           - Index: 0
             Item: Sprint_Mail_IL
-            Rate: 10
+            Rate: 100
           - Index: 1
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
       - Monster: ILL_PIERE
         Drops:
           - Index: 0
             Item: Gelerdria_IL
-            Rate: 10
+            Rate: 100
             RandomOptionGroup: ILL_PHYSIC_NORMAL
           - Index: 1
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
       - Monster: ILL_ANT_EGG
         Drops:
           - Index: 0
             Item: Siver_Guard_IL
-            Rate: 5
+            Rate: 50
           - Index: 1
             Item: Sprint_Shoes_IL
-            Rate: 5
+            Rate: 50
           - Index: 2
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
       - Monster: ILL_GIEARTH
         Drops:
           - Index: 0
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
           - Index: 1
             Item: Thorn_Staff_IL
-            Rate: 10
+            Rate: 100
             RandomOptionGroup: ILL_MAGIC_NORMAL
           - Index: 2
             Item: Twins_Box_IL
-            Rate: 5
+            Rate: 35
       - Monster: ILL_FARMILIAR
         Drops:
           - Index: 0
             Item: Ancient_Dagger_IL
-            Rate: 10
+            Rate: 100
             RandomOptionGroup: ILL_MAGIC_NORMAL
           - Index: 1
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
       - Monster: ILL_VITATA
         Drops:
           - Index: 0
             Item: Sprint_Ring_IL
-            Rate: 10
+            Rate: 100
           - Index: 1
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
           - Index: 2
             Item: Twins_Box_IL
-            Rate: 5
+            Rate: 35
       - Monster: ILL_MAYA
         Drops:
           - Index: 0
@@ -2434,96 +2434,96 @@ Body:
         Drops:
           - Index: 0
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
           - Index: 1
             Item: Survival_Staff_IL
-            Rate: 25
+            Rate: 150
             RandomOptionGroup: ILL_MAGIC_NORMAL
           - Index: 2
             Item: Teddy_Bear_Box_IL
-            Rate: 5
+            Rate: 35
       - Monster: ILL_MINERAL
         Drops:
           - Index: 0
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
           - Index: 1
             Item: Survival_Staff_IL
-            Rate: 25
+            Rate: 150
             RandomOptionGroup: ILL_MAGIC_NORMAL
           - Index: 2
             Item: Teddy_Bear_Box_IL
-            Rate: 5
+            Rate: 35
       - Monster: ILL_PITMAN
         Drops:
           - Index: 0
             Item: Gate_KeeperDD_IL
-            Rate: 25
+            Rate: 150
             RandomOptionGroup: ILL_PHYSIC_NORMAL
           - Index: 1
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
           - Index: 2
             Item: Teddy_Bear_Box_IL
-            Rate: 5
+            Rate: 35
       - Monster: ILL_TEDDY_BEAR_R
         Drops:
           - Index: 0
             Item: Headband_Of_Power_IL
-            Rate: 25
+            Rate: 150
           - Index: 1
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
           - Index: 2
             Item: Teddy_Bear_Box_IL
-            Rate: 5
+            Rate: 35
       - Monster: ILL_TEDDY_BEAR_Y
         Drops:
           - Index: 0
             Item: Boots_IL
-            Rate: 25
+            Rate: 150
           - Index: 1
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
           - Index: 2
             Item: Teddy_Bear_Box_IL
-            Rate: 5
+            Rate: 35
       - Monster: ILL_TEDDY_BEAR_W
         Drops:
           - Index: 0
             Item: Counter_Dagger_IL
-            Rate: 25
+            Rate: 150
             RandomOptionGroup: ILL_PHYSIC_NORMAL
           - Index: 1
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
           - Index: 2
             Item: Teddy_Bear_Box_IL
-            Rate: 5
+            Rate: 35
       - Monster: ILL_OBSIDIAN
         Drops:
           - Index: 0
             Item: Counter_Dagger_IL
-            Rate: 25
+            Rate: 150
             RandomOptionGroup: ILL_PHYSIC_NORMAL
           - Index: 1
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
           - Index: 2
             Item: Teddy_Bear_Box_IL
-            Rate: 5
+            Rate: 35
       - Monster: ILL_TEDDY_BEAR_G
         Drops:
           - Index: 0
             Item: Gate_KeeperDD_IL
-            Rate: 25
+            Rate: 150
             RandomOptionGroup: ILL_PHYSIC_NORMAL
           - Index: 1
             Item: IllusionStone
-            Rate: 10
+            Rate: 80
           - Index: 2
             Item: Teddy_Bear_Box_IL
-            Rate: 5
+            Rate: 35
       - Monster: ILL_TEDDY_BEAR_S
         Drops:
           - Index: 0

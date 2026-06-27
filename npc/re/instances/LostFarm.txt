@@ -21,6 +21,8 @@ ba_maison,311,206,3	script	Luina#greeen	4_EP17_BASIC_B,{
 		mes "- This quest is for level 150 or higher -";
 		close;
 	}
+	// QoL daily bypass
+	goto L_DailyEntry;
 	if (ep17_2_main < 9) {
 		mes "- I've met eyes with the automatic doll in front of the farming facility. -";
 		next;
@@ -210,6 +212,7 @@ ba_maison,311,206,3	script	Luina#greeen	4_EP17_BASIC_B,{
 		mes "- The cat cried with a high pitch sound as if it's excited. -";
 		next;
 	}
+L_DailyEntry:
 	switch( checkquest(8587,PLAYTIME) ) {
 	case -1:
 		break;
@@ -1376,6 +1379,8 @@ OnMobDead:
 		setquest 8589;
 	}
 	mes "See you next time!";
+	getitem 25669,10; // QoL Varmeal Tickets reward
+	getexp 5000000,1000000;
 	close2;
 	warp "ba_maison",308,202;
 	end;

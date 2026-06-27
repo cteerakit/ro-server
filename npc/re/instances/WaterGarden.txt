@@ -11,16 +11,16 @@
 //============================================================
 
 ba_maison,238,44,5	script	Harad#jh_ba1	4_EP17_BASIC_B,{
-	if (ep172_watergarden < 3) {
-		cutin "ep172_beta",2;
-		mes "[Harad]";
-		mes "Hello, guest.";
-		mes "This place is the docks.";
-		next;
-		mes "[Harad]";
-		mes "We don't have any ships operating right now. But the scenery is nice, feel free to take a look around for a while!";
-		close3;
-	}
+	// if (ep172_watergarden < 3) {
+	// 	cutin "ep172_beta",2;
+	// 	mes "[Harad]";
+	// 	mes "Hello, guest.";
+	// 	mes "This place is the docks.";
+	// 	next;
+	// 	mes "[Harad]";
+	// 	mes "We don't have any ships operating right now. But the scenery is nice, feel free to take a look around for a while!";
+	// 	close3;
+	// }
 	switch( checkquest(16439,PLAYTIME) ) {
 	case -1:
 		break;
@@ -49,7 +49,7 @@ ba_maison,238,44,5	script	Harad#jh_ba1	4_EP17_BASIC_B,{
 	next;
 	cutin "",255;
 	.@normal = is_party_leader();
-	.@hard = (.@normal && isbegin_quest(16430) == 2);
+	.@hard = .@normal;
 	.@md_name$ = "Water Garden";	// default
 	switch( select( (.@normal ? "Create Water Garden" : ""), (.@hard ? "Create Water Garden Hard" : ""), "^0000CDGarden Entrance^000000" ) ) {
 	case 1:
@@ -71,7 +71,7 @@ ba_maison,238,44,5	script	Harad#jh_ba1	4_EP17_BASIC_B,{
 		.@other_quest = 16437;
 		break;
 	case 3:
-		if (ep172_watergarden > 3) {
+		if (1) {
 			.@instance_name$ = instance_live_info(ILI_NAME, instance_id(IM_PARTY));
 			if (.@instance_name$ != "Water Garden" && .@instance_name$ != "Water Garden Hard") {
 				cutin "ep172_beta",2;
@@ -1019,6 +1019,8 @@ OnTouchNPC:
 		next;
 		mes "[Velkina]";
 		mes "Then, I'll show you the way outside again!";
+		getitem 25669,10; // QoL Varmeal Tickets reward
+		getexp 5000000,1000000;
 		close2;
 		warp "ba_maison",233,46;
 		end;

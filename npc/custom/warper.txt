@@ -566,12 +566,16 @@ G8: Restrict("RE");
 	Instances:
 // --------------------------------------------------
 menu	"Bakonawa Lake",I1, "Bangungot Hospital 2F",I2, "Buwaya Cave",I3,
-		"Devil Tower",I4, "Eclage Interior",I5, "Endless Tower",I6,
-		"Faceworms Nest",I7, "Geffen Magic Tournament",I8, "Ghost Palace",I9,
-		"Hazy Forest",I10, "Horror Toy Factory",I11, "Malangdo Culvert",I12,
-		"Nidhoggur's Nest",I13, "Octopus Cave",I14, "Old Glast Heim",I15,
-		"Orc's Memory",I16, "Sarah and Fenrir",I17, "Sara Memory",I18,
-		"Sealed Shrine",I19, "Wolfchev's Laboratory",I20;
+		"Central Laboratory",I27, "Charleston Crisis",I28, "Devil Tower",I4,
+		"Eclage Interior",I5, "Endless Tower",I6, "Faceworms Nest",I7,
+		"Geffen Magic Tournament",I8, "Ghost Palace",I9, "Hazy Forest",I10,
+		"Heart Hunter War Base",I26, "Hidden Flower Garden",I23, "Horror Toy Factory",I11,
+		"Infinite Space",I33, "Isle of Bios",I29, "Lost Farm",I24,
+		"Malangdo Culvert",I12, "Morse's Cave",I30, "Nidhoggur's Nest",I13,
+		"Octopus Cave",I14, "Old Glast Heim",I15, "Orc's Memory",I16,
+		"Sara Memory",I18, "Sarah and Fenrir",I17, "Sealed Shrine",I19,
+		"Sky Fortress Invasion",I32, "Temple of the Demon God",I31, "Villa of Deception",I21,
+		"Water Garden",I22, "Werner Laboratory",I25, "Wolfchev's Laboratory",I20;
 
 I1: Restrict("RE");
 	Go("ma_scene01",172,175);
@@ -609,6 +613,32 @@ I18: Restrict("RE");
 I19: Go("monk_test",306,143);
 I20: Restrict("RE");
 	Go("lhz_dun04",148,269);
+I21: Restrict("RE");
+	Go("wolfvill",79,260);
+I22: Restrict("RE");
+	Go("ba_maison",238,44);
+I23: Restrict("RE");
+	Go("ba_maison",120,321);
+I24: Restrict("RE");
+	Go("ba_maison",311,206);
+I25: Restrict("RE");
+	Go("slabw01",236,91);
+I26: Restrict("RE");
+	Go("ein_fild04",281,337);
+I27: Restrict("RE");
+	Go("verus01",149,155);
+I28: Restrict("RE");
+	Go("verus04",75,114);
+I29: Restrict("RE");
+	Go("moro_cav",50,64);
+I30: Restrict("RE");
+	Go("moro_cav",61,69);
+I31: Restrict("RE");
+	Go("moro_cav",41,73);
+I32: Restrict("RE");
+	Go("prt_q",249,82);
+I33: Restrict("RE");
+	Go("cmd_fild07",58,278);
 
 // --------------------------------------------------
 	Special:

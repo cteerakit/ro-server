@@ -148,8 +148,8 @@ OnInit:
 }
 
 slabw01,246,88,3	script	Central_room#evt_gate01	PORTAL,{
-	if (terra_gloria_main != 21 && terra_gloria_main < 23)
-		end;
+	// if (terra_gloria_main != 21 && terra_gloria_main < 23)
+	// 	end;
 	if (getcharid(1) < 1 || (terra_gloria_main == 21 && is_party_leader() == false)) {
 		mes "^4d4dffMD Only the party leader can enter [Central room] now.^000000";
 		close;

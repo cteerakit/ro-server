@@ -976,12 +976,12 @@ OnTouch_:
 	mes "and will vanish..";
 	close2;
 	if (isbegin_quest(1263) == 2)
-		getitem 6672,1;// Gray Shard
+		getitem 6672,15;// Gray Shard (QoL Increase)
 	else {
 		setquest 1263;// Cursed Swordman
 		completequest 1263;
 		getexp 900000,500000;
-		getitem 6672,2;// Gray Shard
+		getitem 6672,30;// Gray Shard (QoL Increase)
 	}
 	warp "dali02",46,129;
 	end;
